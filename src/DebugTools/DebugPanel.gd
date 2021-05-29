@@ -1,4 +1,5 @@
 extends CanvasLayer
+class_name BWDebugPanel
 
 export(String) var debug_action := "ui_home"
 
