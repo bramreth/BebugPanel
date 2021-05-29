@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://common/themes/debug.tres" type="Theme" id=1]
-[ext_resource path="res://src/DebugTools/DebugOptions.gd" type="Script" id=2]
+[ext_resource path="res://src/OptionalWindows/DebugOptions.gd" type="Script" id=2]
 
 [node name="Options" type="Tabs"]
 anchor_right = 1.0
@@ -21,19 +21,20 @@ __meta__ = {
 }
 
 [node name="TimeScale" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 1920.0
-margin_bottom = 21.0
+margin_right = 1024.0
+margin_bottom = 16.0
 
 [node name="title" type="Label" parent="VBoxContainer/TimeScale"]
+margin_top = 1.0
 margin_right = 120.0
-margin_bottom = 21.0
+margin_bottom = 15.0
 rect_min_size = Vector2( 120, 0 )
 text = "time scale"
 
 [node name="HSlider" type="HSlider" parent="VBoxContainer/TimeScale"]
 margin_left = 124.0
-margin_right = 1796.0
-margin_bottom = 21.0
+margin_right = 900.0
+margin_bottom = 16.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 min_value = 0.25
@@ -44,24 +45,25 @@ tick_count = 8
 ticks_on_borders = true
 
 [node name="value" type="Label" parent="VBoxContainer/TimeScale"]
-margin_left = 1800.0
-margin_right = 1920.0
-margin_bottom = 21.0
+margin_left = 904.0
+margin_top = 1.0
+margin_right = 1024.0
+margin_bottom = 15.0
 rect_min_size = Vector2( 120, 0 )
 text = "time scale"
 
 [node name="ReloadButton" type="Button" parent="VBoxContainer"]
-margin_top = 25.0
+margin_top = 20.0
 margin_right = 200.0
-margin_bottom = 75.0
+margin_bottom = 70.0
 rect_min_size = Vector2( 200, 50 )
 size_flags_horizontal = 0
 text = "Reload current scene"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
-margin_top = 79.0
+margin_top = 74.0
 margin_right = 200.0
-margin_bottom = 129.0
+margin_bottom = 124.0
 rect_min_size = Vector2( 200, 50 )
 size_flags_horizontal = 0
 text = "Exit"

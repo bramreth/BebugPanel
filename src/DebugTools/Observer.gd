@@ -1,7 +1,7 @@
 extends Tabs
 
 var root : TreeItem
-export (Array, String) var observation_groups := []
+export (Array, String) var observation_groups := ["DebugPanel"]
 
 signal monitor(node, property)
 signal ignore(node, property)
@@ -11,10 +11,6 @@ onready var _tree := $VBoxContainer/Tree
 
 func _ready() -> void:
 	spawn_tree()
-	
-#func _unhandled_input(event: InputEvent) -> void:
-#	if event.is_action_pressed("ui_end"):
-#		reset_tree()
 	
 func spawn_tree() -> void:
 	root = _tree.create_item()
