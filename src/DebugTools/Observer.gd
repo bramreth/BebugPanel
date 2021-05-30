@@ -1,18 +1,14 @@
 extends Tabs
 
 var root : TreeItem
-export (Array, String) var observation_groups := ["DebugPanel"]
 
 signal monitor(node, property)
 signal ignore(node, property)
-signal reset()
+#signal reset()
 
 onready var _tree := $VBoxContainer/Tree
-
-func _ready() -> void:
-	spawn_tree()
 	
-func spawn_tree() -> void:
+func spawn_tree(observation_groups) -> void:
 	root = _tree.create_item()
 	_tree.set_hide_root(true)
 	for group in observation_groups:
@@ -50,9 +46,9 @@ func add_item_to_tree(item, base) -> void:
 	
 	for property in item.get_property_list():
 		match property["usage"]:
-			7:
+			PROPERTY_USAGE_DEFAULT:
 				create_tree_property(general_property, property["name"], item)
-			8192:
+			PROPERTY_USAGE_SCRIPT_VARIABLE:
 				create_tree_property(script_variable, property["name"], item)
 			_:
 				continue

@@ -14,7 +14,7 @@ func _ready() -> void:
 	root = _tree.create_item()
 	_tree.set_hide_root(true)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	for key in _monitor_dict:
 		if key:
 			var data = key[0].get(key[1])
@@ -24,21 +24,34 @@ func _process(delta: float) -> void:
 
 func add_monitor(node, property) -> void:
 	_monitor_dict[[node, property]] = create_tree_property(node, property)
-	node.connect("tree_exiting", self, "remove_monitor", [node, property])
+	
+	# This is important to let the node be deleted without a crash
+	var node_already_bound = false
+	for binding in node.get_signal_connection_list("tree_exiting"):
+		if binding.source == node:
+			node_already_bound = true
+	if not node_already_bound:
+		node.connect("tree_exiting", self, "remove_node", [node])
+		
 	if _monitor_dict.keys():
 		set_process(true)
 		_fader.fade_in()
 		
+func remove_node(node) -> void:
+	node.disconnect("tree_exiting", self, "remove_monitor")
+	for key in _monitor_dict:
+		if key[0] == node:
+			remove_monitor(node, key[1])
 		
 func remove_monitor(node, property) -> void:
-	node.disconnect("tree_exiting", self, "remove_monitor")
+#	node.disconnect("tree_exiting", self, "remove_monitor")
 	if _monitor_dict.has([node, property]):
 		var pair = _monitor_dict[[node, property]]
 		var parent = pair.get_parent()
 		pair.free()
 		if parent.get_children() == null:
 			parent.free()
-		_monitor_dict.erase([node, property])
+		var _erase_result = _monitor_dict.erase([node, property])
 	if not _monitor_dict.keys():
 		set_process(false)
 		_fader.fade_out()
