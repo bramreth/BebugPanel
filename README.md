@@ -1,6 +1,6 @@
 # BebugPanel
 
-![](.github\BebugPanelBanner.png)
+![Bebug banner image](.github/BebugPanelBanner.png)
 
 A collection of debug tools by yours truly - **Bramwell Williams**. Currently the observer panel which acts as an in game inspector for the properties of nodes.
 
