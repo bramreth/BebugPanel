@@ -1,8 +1,10 @@
-# BWDebug
+# BebugPanel
 
-A collection of debug tools by Bramwell Williams. Currently the observer panel which acts as an in game inspector for the properties of nodes.
+![](.github\BebugPanelBanner.png)
 
-The BWDebugPanel is a canvas layer you can add to your game world with a selection of tools to aid in your debugging process.
+A collection of debug tools by yours truly - **Bramwell Williams**. Currently the observer panel which acts as an in game inspector for the properties of nodes.
+
+The BebugPanel is a canvas layer you can add to your game world with a selection of tools to aid in your debugging process.
 
 The core of the panel is the observer window. Here you can add groups you want to observe in real time. Their properties are exposed and you can observer them changing in real time.
 
@@ -10,7 +12,7 @@ The core of the panel is the observer window. Here you can add groups you want t
 
 ### Usage
 
-1. Add the BWDebugPanel to your game scene
+1. Add the BebugPanel to your game scene
 1. Set the InputMap action that should open and close the window with the `Debug Action` property.
 1. Add group names to the `Observation Group` property to define the nodes you want the observer to track the variables of.
 
