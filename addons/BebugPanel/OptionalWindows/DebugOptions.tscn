@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://common/themes/debug.tres" type="Theme" id=1]
-[ext_resource path="res://src/OptionalWindows/DebugOptions.gd" type="Script" id=2]
+[ext_resource path="res://addons/BebugPanel/debug.tres" type="Theme" id=1]
+[ext_resource path="res://addons/BebugPanel/OptionalWindows/DebugOptions.gd" type="Script" id=2]
+
 
 [node name="Options" type="Tabs"]
 anchor_right = 1.0

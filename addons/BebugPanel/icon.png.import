@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-4da5675a4ebb794c3bb5dda3bf14417b.stex"
+path="res://.import/icon.png-9fd97505f498d942d927fab32ea815c2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/DebugTools/icon.png"
-dest_files=[ "res://.import/icon.png-4da5675a4ebb794c3bb5dda3bf14417b.stex" ]
+source_file="res://addons/BebugPanel/icon.png"
+dest_files=[ "res://.import/icon.png-9fd97505f498d942d927fab32ea815c2.stex" ]
 
 [params]
 

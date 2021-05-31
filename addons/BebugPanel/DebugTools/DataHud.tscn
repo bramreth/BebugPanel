@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://common/themes/debug.tres" type="Theme" id=1]
-[ext_resource path="res://src/DebugTools/DataHud.gd" type="Script" id=2]
-[ext_resource path="res://src/AnimationTools/fader/Fader.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/BebugPanel/debug.tres" type="Theme" id=1]
+[ext_resource path="res://addons/BebugPanel/DebugTools/DataHud.gd" type="Script" id=2]
+[ext_resource path="res://addons/BebugPanel/AnimationTools/fader/Fader.tscn" type="PackedScene" id=3]
+
 
 [node name="DataHud" type="MarginContainer"]
 anchor_left = 1.0

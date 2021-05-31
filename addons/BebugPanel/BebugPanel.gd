@@ -1,5 +1,5 @@
 extends CanvasLayer
-class_name BWDebugPanel, "icon.png"
+class_name BebugPanel, "icon.png"
 
 export(String) var debug_action := "ui_home"
 export (Array, String) var observation_groups := ["DebugPanel"]

@@ -10,17 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "CanvasLayer",
-"class": "BWDebugPanel",
+"class": "BebugPanel",
 "language": "GDScript",
-"path": "res://src/DebugTools/DebugPanel.gd"
+"path": "res://addons/BebugPanel/BebugPanel.gd"
 } ]
 _global_script_class_icons={
-"BWDebugPanel": "res://src/DebugTools/icon.png"
+"BebugPanel": "res://addons/BebugPanel/icon.png"
 }
 
 [application]
 
-config/name="Bw Debug"
+config/name="BebugPanel"
 config/icon="res://icon.png"
 
 [physics]
