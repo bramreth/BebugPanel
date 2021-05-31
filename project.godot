@@ -15,7 +15,7 @@ _global_script_classes=[ {
 "path": "res://src/DebugTools/DebugPanel.gd"
 } ]
 _global_script_class_icons={
-"BWDebugPanel": ""
+"BWDebugPanel": "res://src/DebugTools/icon.png"
 }
 
 [application]
